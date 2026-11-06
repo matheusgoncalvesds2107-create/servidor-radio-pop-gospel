@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100b2b">
+  <meta name="description" content="Rádio Pop Gospel — música, fé e energia para o seu dia. Ouça ao vivo!">
+  <title>Rádio Pop Gospel | Ao Vivo</title>
+  <style>
+    :root{--bg:#090719;--panel:#15102f;--panel2:#1d1640;--pink:#ff4da6;--cyan:#42e8ff;--gold:#ffd66b;--white:#f8f7ff;--muted:#b8b2d4}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(ellipse at 15% 0%,#31205e 0,transparent 42%),radial-gradient(ellipse at 90% 25%,#142d59 0,transparent 35%),var(--bg);color:var(--white);font-family:Inter,Segoe UI,Arial,sans-serif;min-height:100vh}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.4px}.mark{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--pink),#8d5cff 55%,var(--cyan));display:grid;place-items:center;box-shadow:0 8px 30px #a04bff55}
+    .mark svg{width:27px;height:27px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:3px}
+    nav{display:flex;gap:22px;color:var(--muted);font-size:14px}nav a{text-decoration:none}nav a:hover{color:var(--cyan)}
+    .live-pill{border:1px solid #ff4da677;color:#ff8ac3;border-radius:999px;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:1.4px}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;padding:55px 0 65px}
+    .eyebrow{color:var(--cyan);font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase}
+    h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin:17px 0 18px;letter-spacing:-3px}h1 span{background:linear-gradient(90deg,var(--pink),#b38aff,var(--cyan));background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:17px;line-height:1.65;max-width:510px}
+    .hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:27px}
+    .btn{border:0;border-radius:14px;padding:14px 20px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+    .primary{background:linear-gradient(100deg,var(--pink),#925cff);color:white;box-shadow:0 10px 28px #a03bba55}.secondary{border:1px solid #ffffff26;background:#ffffff0b;color:var(--white)}
+    .visual{position:relative;min-height:360px;display:grid;place-items:center}
+    .orb{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff8ac5,transparent 27%),linear-gradient(145deg,#ff4da6,#7b55ff 55%,#24c9e8);box-shadow:0 0 80px #9d4cff66, inset -18px -22px 55px #140b49aa;display:grid;place-items:center;position:relative}
+    .orb:before,.orb:after{content:"";position:absolute;border:1px solid #ffffff35;border-radius:50%;inset:-22px}.orb:after{inset:-44px;border-color:#ffffff18}
+    .equalizer{display:flex;align-items:center;gap:7px;height:110px}.equalizer i{width:9px;border-radius:10px;background:white;box-shadow:0 0 18px #fff;animation:wave 1s ease-in-out infinite alternate}.equalizer i:nth-child(1),.equalizer i:nth-child(7){height:30px}.equalizer i:nth-child(2),.equalizer i:nth-child(6){height:65px;animation-delay:.2s}.equalizer i:nth-child(3),.equalizer i:nth-child(5){height:95px;animation-delay:.4s}.equalizer i:nth-child(4){height:48px;animation-delay:.1s}@keyframes wave{to{transform:scaleY(.45)}}
+    .float-tag{position:absolute;background:#171132dd;border:1px solid #ffffff24;border-radius:15px;padding:12px 15px;backdrop-filter:blur(12px);font-size:12px;color:var(--muted)}.float-tag strong{display:block;color:white;font-size:14px;margin-bottom:3px}.tag1{top:38px;left:0}.tag2{bottom:35px;right:0}
+    .player-section{margin:0 auto 65px;background:linear-gradient(115deg,#211543,#111a38);border:1px solid #ffffff20;border-radius:26px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;box-shadow:0 20px 65px #0005}
+    .player-head{display:flex;align-items:center;gap:14px}.cover{width:62px;height:62px;border-radius:17px;background:linear-gradient(135deg,var(--pink),#7756ff,var(--cyan));display:grid;place-items:center;font-size:25px}.player-head small{color:var(--muted);letter-spacing:1.5px;font-size:10px}.player-head h2{margin:4px 0;font-size:20px}.status{color:#7df5c2;font-size:12px;font-weight:700}
+    .controls{display:flex;align-items:center;gap:12px}.play{width:58px;height:58px;border:0;border-radius:50%;background:linear-gradient(135deg,var(--pink),#8655ff);color:white;font-size:22px;cursor:pointer;box-shadow:0 8px 24px #a04bff55}
+    .volume{width:105px;accent-color:var(--cyan)}audio{display:none}
+    .section-title{display:flex;justify-content:space-between;align-items:end;margin:0 0 20px}.section-title h2{font-size:28px;margin:0}.section-title p{color:var(--muted);margin:0;font-size:13px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:70px}.card{background:linear-gradient(145deg,#1a1535,#111027);border:1px solid #ffffff16;border-radius:20px;padding:22px}.card .icon{font-size:25px}.card h3{margin:14px 0 7px}.card p{color:var(--muted);line-height:1.5;font-size:13px;margin:0}.time{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1px}
+    .schedule{background:#ffffff08;border:1px solid #ffffff15;border-radius:22px;padding:24px;margin-bottom:65px}.schedule-row{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid #ffffff12}.schedule-row:last-child{border:0}.schedule-row strong{display:block}.schedule-row span{color:var(--muted);font-size:13px}
+    footer{border-top:1px solid #ffffff16;padding:28px 0 38px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding:35px 0 45px}.visual{min-height:300px;grid-row:1}.orb{width:230px}.float-tag{font-size:10px}.player-section{grid-template-columns:1fr}.controls{justify-content:space-between}.cards{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:7px}h1{letter-spacing:-2px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 10v4m4-8v12m4-16v20m4-14v8m4-12v16"/></svg></div>
+        <div>RÁDIO POP GOSPEL<small>FÉ • MÚSICA • CONEXÃO</small></div>
+      </div>
+      <nav><a href="#ao-vivo">Ouvir</a><a href="#programacao">Programação</a><a href="#sobre">Sobre</a></nav>
+      <div class="live-pill">● POP GOSPEL</div>
+    </header>
+
+    <main>
+      <section class="hero" id="sobre">
+        <div>
+          <div class="eyebrow">Sua trilha sonora de fé</div>
+          <h1>Viva a fé.<br><span>Sinta o som.</span></h1>
+          <p class="lead">Louvor, pop, novidades e mensagens que inspiram. A energia da música cristã para acompanhar você em todos os momentos.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#ao-vivo">▶ Ouvir agora</a>
+            <a class="btn secondary" href="#programacao">Ver programação</a>
+          </div>
+        </div>
+        <div class="visual" aria-hidden="true">
+          <div class="float-tag tag1"><strong>POP GOSPEL</strong>O som que inspira</div>
+          <div class="orb"><div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="float-tag tag2"><strong>🎧 AO VIVO</strong>Música que conecta</div>
+        </div>
+      </section>
+
+      <section class="player-section" id="ao-vivo">
+        <div class="player-head">
+          <div class="cover">♫</div>
+          <div><small>TRANSMISSÃO ONLINE</small><h2>Rádio Pop Gospel</h2><div class="status" id="status">Verificando transmissão...</div></div>
+        </div>
+        <div class="controls">
+          <button class="play" id="play" aria-label="Ouvir rádio">▶</button>
+          <div><div style="font-size:12px;color:var(--muted);margin-bottom:7px">Volume</div><input class="volume" id="volume" type="range" min="0" max="1" step=".05" value=".85"></div>
+        </div>
+        <audio id="audio" preload="none" crossorigin="anonymous" src="/radio.mp3"></audio>
+      </section>
+
+      <section>
+        <div class="section-title"><div><div class="eyebrow">Na programação</div><h2>Conteúdo que conecta</h2></div><p>Informação, esporte e inspiração.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">✨</div><div class="time">TODOS OS DIAS</div><h3>Pop Gospel Hits</h3><p>Uma seleção de músicas e louvores para deixar seu dia cheio de fé e boas vibrações.</p></article>
+          <article class="card"><div class="icon">📰</div><div class="time">13H • 18H</div><h3>Pop News</h3><p>As notícias e novidades com Luzia Rodrigues.</p></article>
+          <article class="card"><div class="icon">⚽</div><div class="time">15H • 20H</div><h3>Pop Sports</h3><p>Esporte e futebol com Kaique MG.</p></article>
+        </div>
+      </section>
+
+      <section id="programacao">
+        <div class="section-title"><div><div class="eyebrow">Fique ligado</div><h2>Programação</h2></div><p>Horários de referência</p></div>
+        <div class="schedule">
+          <div class="schedule-row"><div><strong>Pop Gospel Hits</strong><span>Música cristã, pop e louvores</span></div><b class="time">07:30 – 13:00</b></div>
+          <div class="schedule-row"><div><strong>Pop News • Luzia Rodrigues</strong><span>Notícias e novidades</span></div><b class="time">13:00 – 13:30</b></div>
+          <div class="schedule-row"><div><strong>Pop Sports • Kaique MG</strong><span>Esporte e futebol</span></div><b class="time">15:00 – 16:00</b></div>
+          <div class="schedule-row"><div><strong>Pop News • Luzia Rodrigues</strong><span>Edição da tarde</span></div><b class="time">18:00</b></div>
+          <div class="schedule-row"><div><strong>Pop Sports • Kaique MG</strong><span>Boletim esportivo</span></div><b class="time">20:00</b></div>
+        </div>
+      </section>
+    </main>
+    <footer><span>© <span id="year"></span> Rádio Pop Gospel. Todos os direitos reservados.</span><span>Uma rádio Vem Comigo Records</span></footer>
+  </div>
+<script>
+  const audio = document.getElementById('audio');
+  const play = document.getElementById('play');
+  const statusEl = document.getElementById('status');
+  const volume = document.getElementById('volume');
+  document.getElementById('year').textContent = new Date().getFullYear();
+  audio.volume = Number(volume.value);
+  volume.addEventListener('input', () => audio.volume = Number(volume.value));
+  play.addEventListener('click', async () => {
+    if (audio.paused) {
+      try { await audio.play(); }
+      catch (e) { statusEl.textContent = 'Não foi possível iniciar. Tente novamente em instantes.'; }
+    } else audio.pause();
+  });
+  audio.addEventListener('playing', () => { play.textContent = 'Ⅱ'; statusEl.textContent = '● AO VIVO — conectado'; });
+  audio.addEventListener('pause', () => { play.textContent = '▶'; if (!audio.ended) statusEl.textContent = 'Transmissão pausada'; });
+  audio.addEventListener('waiting', () => statusEl.textContent = 'Conectando ao áudio...');
+  audio.addEventListener('error', () => statusEl.textContent = 'Sinal indisponível no momento');
+  async function checkServer(){
+    try {
+      const r = await fetch('/api/health', {cache:'no-store'});
+      const d = await r.json();
+      if (d.status === 'online' && d.sourceConnected) {
+        if (audio.paused) statusEl.textContent = 'Servidor online — aguardando reprodução';
+      } else if (d.status === 'online' && audio.paused) {
+        statusEl.textContent = 'Servidor online — aguardando sinal da rádio';
+      }
+    } catch { if (audio.paused) statusEl.textContent = 'Verificando servidor...'; }
+  }
+  checkServer(); setInterval(checkServer, 15000);
+</script>
+</body>
+</html>

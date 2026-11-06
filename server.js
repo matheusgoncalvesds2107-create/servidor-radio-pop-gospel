@@ -67,6 +67,18 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (path === "/" && req.method === "GET") {
+    const fs = require("fs");
+    const indexPath = require("path").join(__dirname, "public", "index.html");
+    if (fs.existsSync(indexPath)) {
+      res.writeHead(200, {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-cache"
+      });
+      return res.end(fs.readFileSync(indexPath));
+    }
+  }
+
   return json(404, { status: "error", error: "Rota nao encontrada" });
 });
 
