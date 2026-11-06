@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: servidor-radio-pop-gospel
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: POP_GOSPEL_PANEL_TOKEN
+        sync: false

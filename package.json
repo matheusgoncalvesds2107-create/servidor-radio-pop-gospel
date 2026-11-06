@@ -1,0 +1,13 @@
+{
+  "name": "servidor-radio-pop-gospel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor independente de streaming WebSocket para a Radio Pop Gospel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
